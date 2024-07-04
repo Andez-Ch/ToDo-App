@@ -1,0 +1,53 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .todo-item.completed {
+    background-color: #d4edda;
+  }
+  
+  .todo-details {
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .todo-details img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 10px;
+    border-radius: 5%;
+  }
+  
+  .delete-button,
+  .update-button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  .update-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .update-button:hover {
+    background-color: #0056b3;
+  }
+  
