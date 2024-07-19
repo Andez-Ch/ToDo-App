@@ -1,39 +1,28 @@
 import React, { useState } from 'react';
 import '../Styles/AddTodo.css';
-import { db, storage } from '../firebase';
-import { addDoc, collection } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
-
-function AddTodo ({ addTodo }) {
+function AddTodo({ addTodo }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState(null);
-
+  
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    let imageUrl = null;
-    if (image) {
-      const imageRef = ref(storage, `images/${image.name}`);
-      await uploadBytes(imageRef, image);
-      imageUrl = await getDownloadURL(imageRef);
-    }
-
     const newTodo = {
+      id: Date.now(),
       title,
       description,
-      image: imageUrl,
+      image: image ? URL.createObjectURL(image) : null,
       completed: false,
     };
 
-    const docRef = await addDoc(collection(db, 'todos'), newTodo);
-    addTodo({ ...newTodo, id: docRef.id });
+    addTodo(newTodo);
 
     setTitle('');
     setDescription('');
@@ -52,12 +41,12 @@ function AddTodo ({ addTodo }) {
           required
         />
         <textarea
-          placeholder="Description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          className="input-field"
-          required
-        ></textarea>
+        placeholder="Description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        className="input-field"
+        required
+      ></textarea>
         <input
           type="file"
           onChange={handleImageChange}
@@ -68,6 +57,7 @@ function AddTodo ({ addTodo }) {
           Add Todo
         </button>
       </div>
+      
     </form>
   );
 }

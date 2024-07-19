@@ -1,54 +1,54 @@
 
 .todo-list {
-  margin-top: 20px;
-}
-.todo-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
-    text-align: left;
+    margin-top: 20px;
   }
-  
-  .todo-table th,
-  .todo-table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-  }
-  
-  .todo-table th {
-    background-color: #f4f4f4;
-  }
-  
-  .todo-table tbody tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .completed {
-    background-color: #d4edda;
-  }
-  
-  .pending {
-    background-color: #fff3cd;
-  }
-  
-  .overdue {
-    background-color: #f8d7da;
-  }
-  
-  .todo-table img {
-    vertical-align: middle;
-    margin-right: 10px;
-  }
-  
-  .todo-table button {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .todo-table button img {
-    width: 20px;
-    height: 20px;
-  }
-  
+  .todo-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 18px;
+      text-align: left;
+    }
+    
+    .todo-table th,
+    .todo-table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+    
+    .todo-table th {
+      background-color: #f4f4f4;
+    }
+    
+    .todo-table tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+    
+    .completed {
+      background-color: #d4edda;
+    }
+    
+    .pending {
+      background-color: #fff3cd;
+    }
+    
+    .overdue {
+      background-color: #f8d7da;
+    }
+    
+    .todo-table img {
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    
+    .todo-table button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .todo-table button img {
+      width: 20px;
+      height: 20px;
+    }
+    
