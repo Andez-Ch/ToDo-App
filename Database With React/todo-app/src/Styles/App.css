@@ -1,0 +1,41 @@
+
+h1 {
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: initial;
+    text-align: center;
+    color: #4caf50;
+    }
+  
+    .undo-container {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #f44336;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .undo-container button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+   
+  
+  
+  @media (max-width: 600px) {
+    .App {
+      padding: 10px;
+    }
+  
+    
+  }
