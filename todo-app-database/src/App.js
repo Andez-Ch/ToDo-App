@@ -87,7 +87,7 @@ function App() {
     <div className="App">
       <h1>TO-DO APP</h1>
       <AddTodo addTodo={addTodo} />
-      <Filter filter={filter} setFilter={setFilter} />
+      <Filter filter={filter} setFilter={setFilter} count={filteredTodos.length} />
       <TodoList
         todos={filteredTodos}
         toggleComplete={toggleComplete}
