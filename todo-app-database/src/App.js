@@ -25,6 +25,8 @@ function App() {
     fetchTodos();
   }, []);
 
+    
+
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
@@ -99,8 +101,11 @@ function App() {
           <button onClick={undoDelete}>Undo</button>
         </div>
       )}
-    </div>
+    </div> 
+
+          
   );
 }
+   
 
 export default App;
