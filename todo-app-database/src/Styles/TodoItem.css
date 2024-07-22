@@ -18,8 +18,15 @@
   }
   
   .todo-details img {
+<<<<<<< Updated upstream
     width: 400px;
     height: 400px;
+=======
+    width: 40%;
+    height: 80%;
+    max-width: 100%;
+    max-height: 100%;
+>>>>>>> Stashed changes
     margin-top: 10px;
     border-radius: 5%;
   }
